@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Minions Run 最新ポスト</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    iframe {
+      width: 400px;
+      height: 500px;
+      border: none;
+    }
+  </style>
+  <script>
+    function refreshIframe() {
+      const iframe = document.getElementById("twitterFrame");
+      iframe.src = iframe.src;
+    }
+    setInterval(refreshIframe, 3 * 60 * 1000); // 3分ごとに更新
+  </script>
+</head>
+<body>
+  <iframe
+    id="twitterFrame"
+    src="https://platform.twitter.com/widgets/timeline.html?screen_name=minionsrunjapan&ref_src=twsrc%5Etfw"
+    width="400"
+    height="500"
+    frameborder="0"
+    scrolling="no"
+    allowtransparency="true">
+  </iframe>
+</body>
+</html>
